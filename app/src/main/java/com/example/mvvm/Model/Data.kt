@@ -1,5 +1,4 @@
-package com.mo_samy.retrofit.models
-
+package com.example.mvvm.Model
 import com.google.gson.annotations.SerializedName
 
 data class Data(
