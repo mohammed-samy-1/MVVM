@@ -1,4 +1,4 @@
-package com.example.mvvm.Model
+package com.example.mvvm.model
 import com.google.gson.annotations.SerializedName
 
 data class DataModel(
