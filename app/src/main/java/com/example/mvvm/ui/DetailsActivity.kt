@@ -61,4 +61,10 @@ class DetailsActivity : AppCompatActivity() {
         progress.visibility = View.GONE
         cl.visibility = View.VISIBLE
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        model.productLD.removeObservers(this)
+        model.errorLiveData.removeObservers(this)
+    }
 }

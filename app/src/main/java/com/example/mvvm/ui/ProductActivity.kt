@@ -45,4 +45,10 @@ class ProductActivity : AppCompatActivity() {
         rv.adapter = adapter
         rv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        model.productsLD.removeObservers(this)
+        model.errorLiveData.removeObservers(this)
+    }
 }
